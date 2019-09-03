@@ -14,7 +14,7 @@ public class LinhaVendaTest {
         String linha = "003;10;11010;300;3403.30;Diego";
         LinhaVenda linhaCliente = new LinhaVenda();
         linhaCliente.leLinha(linha);
-        Venda venda = linhaCliente.getVenda();
+        Venda venda = (Venda) linhaCliente.getModeloUltimaLinhaLida();
         assertEquals("10", venda.getIdVenda());
         assertEquals("11010", venda.getIdItem());
         assertEquals(new BigDecimal("300"), venda.getQuantidadeItem());

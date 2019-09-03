@@ -1,11 +1,12 @@
 package br.com.guilherme.leitor.linha;
 
+import br.com.guilherme.leitor.modelo.ModeloLinha;
 import br.com.guilherme.leitor.modelo.Vendedor;
 
 /**
  * Classe utilizada para ler as linhas com dados de vendedores
  */
-public class LinhaVendedor extends Linha {
+public class LinhaVendedor extends LeitorLinha {
 
     private Vendedor vendedor;
 
@@ -26,7 +27,7 @@ public class LinhaVendedor extends Linha {
      *
      * @return Vendedor
      */
-    public Vendedor getVendedor(){
+    public ModeloLinha getModeloUltimaLinhaLida(){
         return this.vendedor;
     }
 }

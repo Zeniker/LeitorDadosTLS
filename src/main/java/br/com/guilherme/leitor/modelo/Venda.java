@@ -2,7 +2,10 @@ package br.com.guilherme.leitor.modelo;
 
 import java.math.BigDecimal;
 
-public class Venda {
+/**
+ * Classe de modelo da venda
+ */
+public class Venda implements ModeloLinha  {
     private String idVenda;
     private String idItem;
     private BigDecimal quantidadeItem;

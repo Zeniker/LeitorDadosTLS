@@ -1,13 +1,12 @@
 package br.com.guilherme.leitor.linha;
 
+import br.com.guilherme.leitor.modelo.ModeloLinha;
 import br.com.guilherme.leitor.modelo.Venda;
-
-import java.math.BigDecimal;
 
 /**
  * Classe utilizada para ler as linhas com dados de venda
  */
-public class LinhaVenda extends Linha {
+public class LinhaVenda extends LeitorLinha {
 
     private Venda venda;
 
@@ -28,7 +27,7 @@ public class LinhaVenda extends Linha {
      *
      * @return Venda
      */
-    public Venda getVenda(){
+    public ModeloLinha getModeloUltimaLinhaLida(){
         return venda;
     }
 }

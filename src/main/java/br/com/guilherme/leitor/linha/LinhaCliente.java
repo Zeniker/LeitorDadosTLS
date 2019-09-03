@@ -1,11 +1,12 @@
 package br.com.guilherme.leitor.linha;
 
 import br.com.guilherme.leitor.modelo.Cliente;
+import br.com.guilherme.leitor.modelo.ModeloLinha;
 
 /**
  * Classe utilizada para ler as linhas com dados de clientes
  */
-public class LinhaCliente extends Linha {
+public class LinhaCliente extends LeitorLinha {
 
     private Cliente cliente;
 
@@ -26,7 +27,8 @@ public class LinhaCliente extends Linha {
      *
      * @return Cliente
      */
-    public Cliente getCliente(){
+    @Override
+    public ModeloLinha getModeloUltimaLinhaLida(){
         return this.cliente;
     }
 

@@ -1,6 +1,9 @@
 package br.com.guilherme.leitor.modelo;
 
-public class Cliente {
+/**
+ * Classe para o modelo do cliente
+ */
+public class Cliente implements ModeloLinha {
     private final String CNPJ;
     private final String nome;
     private final String ramoAtividade;
