@@ -1,9 +1,17 @@
 package br.com.guilherme.leitor.linha;
 
-import br.com.guilherme.leitor.modelo.Vendedor;
+import br.com.guilherme.leitor.modelo.ModeloLinha;
 
+import java.util.Arrays;
+import java.util.Optional;
+
+/**
+ * Classe para definir o tipo de registro da linha
+ */
 public enum TipoRegistro {
-    VENDEDOR("001", new LinhaVendedor());
+    VENDEDOR("001", new LinhaVendedor()),
+    CLIENTE("002", new LinhaCliente()),
+    VENDA("003", new LinhaVenda());
 
     private final String tipo;
     private final LeitorLinha leitorLinha;
@@ -15,11 +23,16 @@ public enum TipoRegistro {
     }
 
     public static TipoRegistro getTipoRegistro(String linha){
-        return TipoRegistro.VENDEDOR;
+        String[] colunas = linha.split(";");
+
+        Optional<TipoRegistro> tipoRegistroOptional = Arrays.stream(TipoRegistro.values())
+                .filter(t -> t.tipo.equals(colunas[0])).findFirst();
+
+        return tipoRegistroOptional.orElseThrow(() -> new RuntimeException("Tipo não encontrado"));
     }
 
-    public Vendedor extraiModeloDaLinha(String linha){
+    public ModeloLinha extraiModeloDaLinha(String linha){
         this.leitorLinha.leLinha(linha);
-        return (Vendedor) this.leitorLinha.getModeloUltimaLinhaLida();
+        return this.leitorLinha.getModeloUltimaLinhaLida();
     }
 }
