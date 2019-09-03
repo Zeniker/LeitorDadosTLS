@@ -9,11 +9,11 @@ public class Venda {
     private BigDecimal valorItem;
     private String nomeVendedor;
 
-    public Venda(String idVenda, String idItem, BigDecimal quantidadeItem, BigDecimal valorItem, String nomeVendedor) {
+    public Venda(String idVenda, String idItem, String quantidadeItem, String valorItem, String nomeVendedor) {
         this.idVenda = idVenda;
         this.idItem = idItem;
-        this.quantidadeItem = quantidadeItem;
-        this.valorItem = valorItem;
+        this.quantidadeItem = new BigDecimal(quantidadeItem);
+        this.valorItem = new BigDecimal(valorItem);
         this.nomeVendedor = nomeVendedor;
     }
 

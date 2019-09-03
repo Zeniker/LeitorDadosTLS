@@ -9,17 +9,15 @@ import java.math.BigDecimal;
  */
 public class LinhaVenda {
 
-    public void leLinha(String linha){
+    private Venda venda;
 
+    public void leLinha(String linha){
+        String[] colunas = linha.split(";");
+
+        venda = new Venda(colunas[1], colunas[2], colunas[3], colunas[4], colunas[5]);
     }
 
     public Venda getVenda(){
-        return new Venda(
-                "10",
-                "11010",
-                new BigDecimal("300"),
-                new BigDecimal("3403.30"),
-                "Diego"
-        );
+        return venda;
     }
 }
