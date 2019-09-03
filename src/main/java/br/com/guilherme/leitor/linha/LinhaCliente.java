@@ -20,6 +20,11 @@ public class LinhaCliente {
         cliente = new Cliente(colunas[1], colunas[2], colunas[3]);
     }
 
+    /**
+     * Retorna o cliente da última linha lida
+     *
+     * @return Cliente
+     */
     public Cliente getCliente(){
         return this.cliente;
     }
