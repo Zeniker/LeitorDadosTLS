@@ -7,4 +7,6 @@ public abstract class Linha {
     protected String[] separaLinhaEmColunas(String linha){
         return linha.split(";");
     }
+
+    abstract void leLinha(String linha);
 }

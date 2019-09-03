@@ -5,23 +5,24 @@ import br.com.guilherme.leitor.modelo.Cliente;
 /**
  * Classe utilizada para ler as linhas com dados de clientes
  */
-public class LinhaCliente {
+public class LinhaCliente extends Linha {
 
     private Cliente cliente;
 
     /**
-     * Lê uma string passada por parâmetro e extrai seus dados
+     * LÃª uma string passada por parÃ¢metro e extrai seus dados
      *
      * @param linha com os dados do vendedor
      */
+    @Override
     public void leLinha(String linha){
-        String[] colunas = linha.split(";");
+        String[] colunas = this.separaLinhaEmColunas(linha);
 
         cliente = new Cliente(colunas[1], colunas[2], colunas[3]);
     }
 
     /**
-     * Retorna o cliente da última linha lida
+     * Retorna o cliente da Ãºltima linha lida
      *
      * @return Cliente
      */

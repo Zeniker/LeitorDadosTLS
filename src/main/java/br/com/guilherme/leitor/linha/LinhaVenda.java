@@ -7,16 +7,27 @@ import java.math.BigDecimal;
 /**
  * Classe utilizada para ler as linhas com dados de venda
  */
-public class LinhaVenda {
+public class LinhaVenda extends Linha {
 
     private Venda venda;
 
+    /**
+     * Lê uma string passada por parâmetro e extrai seus dados
+     *
+     * @param linha
+     */
+    @Override
     public void leLinha(String linha){
-        String[] colunas = linha.split(";");
+        String[] colunas = this.separaLinhaEmColunas(linha);
 
         venda = new Venda(colunas[1], colunas[2], colunas[3], colunas[4], colunas[5]);
     }
 
+    /**
+     * Retorna a venda da última linha lida
+     *
+     * @return Venda
+     */
     public Venda getVenda(){
         return venda;
     }

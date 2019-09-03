@@ -5,23 +5,24 @@ import br.com.guilherme.leitor.modelo.Vendedor;
 /**
  * Classe utilizada para ler as linhas com dados de vendedores
  */
-public class LinhaVendedor {
+public class LinhaVendedor extends Linha {
 
     private Vendedor vendedor;
 
     /**
-     * Lê uma string passada por parâmetro e extrai seus dados
+     * LÃª uma string passada por parÃ¢metro e extrai seus dados
      *
      * @param linha com os dados do vendedor
      */
+    @Override
     public void leLinha(String linha){
-        String[] colunas = linha.split(";");
+        String[] colunas = this.separaLinhaEmColunas(linha);
 
         vendedor = new Vendedor(colunas[1], colunas[2], colunas[3]);
     }
 
     /**
-     * Busca o vendedor da última linha lida
+     * Busca o vendedor da Ãºltima linha lida
      *
      * @return Vendedor
      */
