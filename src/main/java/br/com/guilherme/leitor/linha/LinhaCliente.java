@@ -7,16 +7,21 @@ import br.com.guilherme.leitor.modelo.Cliente;
  */
 public class LinhaCliente {
 
+    private Cliente cliente;
+
     /**
      * Lê uma string passada por parâmetro e extrai seus dados
      *
      * @param linha com os dados do vendedor
      */
     public void leLinha(String linha){
+        String[] colunas = linha.split(";");
+
+        cliente = new Cliente(colunas[1], colunas[2], colunas[3]);
     }
 
     public Cliente getCliente(){
-        return new Cliente("2345675434544345", "Jose da Silva", "Rural");
+        return this.cliente;
     }
 
 }
