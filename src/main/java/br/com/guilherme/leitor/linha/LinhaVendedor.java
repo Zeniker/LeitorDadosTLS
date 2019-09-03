@@ -7,14 +7,25 @@ import br.com.guilherme.leitor.modelo.Vendedor;
  */
 public class LinhaVendedor {
 
+    private Vendedor vendedor;
+
     /**
+     * Lê uma string passada por parâmetro e extrai seus dados
+     *
      * @param linha com os dados do vendedor
      */
     public void leLinha(String linha){
+        String[] colunas = linha.split(";");
 
+        vendedor = new Vendedor(colunas[1], colunas[2], colunas[3]);
     }
 
+    /**
+     * Busca o vendedor da última linha lida
+     *
+     * @return Vendedor
+     */
     public Vendedor getVendedor(){
-        return new Vendedor("1234567891234", "Diego", 5000);
+        return this.vendedor;
     }
 }

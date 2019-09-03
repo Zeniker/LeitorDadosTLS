@@ -1,18 +1,20 @@
 package br.com.guilherme.leitor.modelo;
 
+import java.math.BigDecimal;
+
 /**
  * Classe de modelo do vendedor
  */
 public class Vendedor {
 
-    private String CPF;
-    private String nome;
-    private long salario;
+    private final String CPF;
+    private final String nome;
+    private final BigDecimal salario;
 
-    public Vendedor(String CPF, String nome, long salario) {
+    public Vendedor(String CPF, String nome, String salario) {
         this.CPF = CPF;
         this.nome = nome;
-        this.salario = salario;
+        this.salario = new BigDecimal(salario);
     }
 
     public String getCPF() {
@@ -23,7 +25,7 @@ public class Vendedor {
         return nome;
     }
 
-    public long getSalario() {
+    public BigDecimal getSalario() {
         return salario;
     }
 }
