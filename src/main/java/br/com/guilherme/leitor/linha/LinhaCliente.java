@@ -1,7 +1,7 @@
 package br.com.guilherme.leitor.linha;
 
+import br.com.guilherme.leitor.Armazenador;
 import br.com.guilherme.leitor.modelo.Cliente;
-import br.com.guilherme.leitor.modelo.ModeloLinha;
 
 /**
  * Classe utilizada para ler as linhas com dados de clientes
@@ -19,17 +19,7 @@ public class LinhaCliente extends LeitorLinha {
     public void leLinha(String linha){
         String[] colunas = this.separaLinhaEmColunas(linha);
 
-        cliente = new Cliente(colunas[1], colunas[2], colunas[3]);
-    }
-
-    /**
-     * Retorna o cliente da última linha lida
-     *
-     * @return Cliente
-     */
-    @Override
-    public ModeloLinha getModeloUltimaLinhaLida(){
-        return this.cliente;
+        Armazenador.clientes.add(new Cliente(colunas[1], colunas[2], colunas[3]));
     }
 
 }

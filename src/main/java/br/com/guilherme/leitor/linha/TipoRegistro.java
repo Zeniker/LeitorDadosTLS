@@ -31,8 +31,7 @@ public enum TipoRegistro {
         return tipoRegistroOptional.orElseThrow(() -> new RuntimeException("Tipo não encontrado"));
     }
 
-    public ModeloLinha extraiModeloDaLinha(String linha){
-        this.leitorLinha.leLinha(linha);
-        return this.leitorLinha.getModeloUltimaLinhaLida();
+    public LeitorLinha getLeitorLinha() {
+        return leitorLinha;
     }
 }

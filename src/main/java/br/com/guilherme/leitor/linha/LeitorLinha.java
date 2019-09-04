@@ -12,6 +12,4 @@ public abstract class LeitorLinha {
 
     public abstract void leLinha(String linha);
 
-    public abstract ModeloLinha getModeloUltimaLinhaLida();
-
 }

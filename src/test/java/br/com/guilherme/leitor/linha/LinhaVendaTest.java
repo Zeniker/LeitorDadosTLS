@@ -1,5 +1,6 @@
 package br.com.guilherme.leitor.linha;
 
+import br.com.guilherme.leitor.Armazenador;
 import br.com.guilherme.leitor.modelo.Venda;
 import org.junit.jupiter.api.Test;
 
@@ -11,10 +12,11 @@ public class LinhaVendaTest {
 
     @Test
     void getDadosVendaTest() {
+        Armazenador.iniciaArmazenamento();
         String linha = "003;10;11010;300;3403.30;Diego";
         LinhaVenda linhaCliente = new LinhaVenda();
         linhaCliente.leLinha(linha);
-        Venda venda = (Venda) linhaCliente.getModeloUltimaLinhaLida();
+        Venda venda = Armazenador.vendas.get(0);
         assertEquals("10", venda.getIdVenda());
         assertEquals("11010", venda.getIdItem());
         assertEquals(new BigDecimal("300"), venda.getQuantidadeItem());

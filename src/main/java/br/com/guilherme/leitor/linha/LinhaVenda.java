@@ -1,6 +1,6 @@
 package br.com.guilherme.leitor.linha;
 
-import br.com.guilherme.leitor.modelo.ModeloLinha;
+import br.com.guilherme.leitor.Armazenador;
 import br.com.guilherme.leitor.modelo.Venda;
 
 /**
@@ -19,15 +19,6 @@ public class LinhaVenda extends LeitorLinha {
     public void leLinha(String linha){
         String[] colunas = this.separaLinhaEmColunas(linha);
 
-        venda = new Venda(colunas[1], colunas[2], colunas[3], colunas[4], colunas[5]);
-    }
-
-    /**
-     * Retorna a venda da última linha lida
-     *
-     * @return Venda
-     */
-    public ModeloLinha getModeloUltimaLinhaLida(){
-        return venda;
+        Armazenador.vendas.add(new Venda(colunas[1], colunas[2], colunas[3], colunas[4], colunas[5]));
     }
 }
