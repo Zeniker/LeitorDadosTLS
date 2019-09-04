@@ -19,4 +19,12 @@ public class Armazenador {
         vendas = new ArrayList<>();
     }
 
+    public static int getTotalClientes(){
+        return clientes.size();
+    };
+
+    public static int getTotalVendedores() {
+        return vendedores.size();
+    }
+
 }
