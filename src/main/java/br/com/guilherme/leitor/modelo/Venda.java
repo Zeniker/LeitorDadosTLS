@@ -39,4 +39,8 @@ public class Venda implements ModeloLinha  {
     public String getNomeVendedor() {
         return nomeVendedor;
     }
+
+    public BigDecimal getValorTotal(){
+        return this.valorItem.multiply(this.quantidadeItem);
+    }
 }

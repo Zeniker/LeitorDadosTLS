@@ -22,7 +22,7 @@ public class LeitorRegistroTest {
         String linha = "001;1234567891234;Diego;5000.00";
         leitorRegistro.leRegistro(linha);
 
-        Vendedor vendedor = Armazenador.vendedores.get(0);
+        Vendedor vendedor = Armazenador.getVendedores().get(0);
         assertEquals("1234567891234", vendedor.getCPF());
         assertEquals("Diego", vendedor.getNome());
         assertEquals(new BigDecimal("5000.00"), vendedor.getSalario());
@@ -32,7 +32,7 @@ public class LeitorRegistroTest {
     void despachaLinhaVendaTest() {
         String linha = "003;10;11010;300;3403.30;Diego";
         leitorRegistro.leRegistro(linha);
-        Venda venda = Armazenador.vendas.get(0);
+        Venda venda = Armazenador.getVendas().get(0);
 
         assertEquals("10", venda.getIdVenda());
         assertEquals("11010", venda.getIdItem());
@@ -45,7 +45,7 @@ public class LeitorRegistroTest {
     void despachaLinhaClienteTest() {
         String linha = "002;2345675434544345;Jose da Silva;Rural";
         leitorRegistro.leRegistro(linha);
-        Cliente cliente = Armazenador.clientes.get(0);
+        Cliente cliente = Armazenador.getClientes().get(0);
         assertEquals("2345675434544345", cliente.getCNPJ());
         assertEquals("Jose da Silva", cliente.getNome());
         assertEquals("Rural", cliente.getRamoAtividade());

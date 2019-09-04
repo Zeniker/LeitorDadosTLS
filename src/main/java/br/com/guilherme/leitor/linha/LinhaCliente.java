@@ -19,7 +19,7 @@ public class LinhaCliente extends LeitorLinha {
     public void leLinha(String linha){
         String[] colunas = this.separaLinhaEmColunas(linha);
 
-        Armazenador.clientes.add(new Cliente(colunas[1], colunas[2], colunas[3]));
+        Armazenador.adicionaCliente(new Cliente(colunas[1], colunas[2], colunas[3]));
     }
 
 }

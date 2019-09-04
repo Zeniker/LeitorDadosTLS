@@ -14,7 +14,7 @@ public class LinhaClienteTest {
         String linha = "002;2345675434544345;Jose da Silva;Rural";
         LinhaCliente linhaCliente = new LinhaCliente();
         linhaCliente.leLinha(linha);
-        Cliente cliente = Armazenador.clientes.get(0);
+        Cliente cliente = Armazenador.getClientes().get(0);
         assertEquals("2345675434544345", cliente.getCNPJ());
         assertEquals("Jose da Silva", cliente.getNome());
         assertEquals("Rural", cliente.getRamoAtividade());

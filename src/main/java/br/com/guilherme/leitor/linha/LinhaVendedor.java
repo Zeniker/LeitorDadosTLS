@@ -19,6 +19,6 @@ public class LinhaVendedor extends LeitorLinha {
     public void leLinha(String linha){
         String[] colunas = this.separaLinhaEmColunas(linha);
 
-        Armazenador.vendedores.add(new Vendedor(colunas[1], colunas[2], colunas[3]));
+        Armazenador.adicionaVendedor(new Vendedor(colunas[1], colunas[2], colunas[3]));
     }
 }
