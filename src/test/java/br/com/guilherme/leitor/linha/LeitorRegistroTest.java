@@ -1,5 +1,6 @@
-package br.com.guilherme.leitor;
+package br.com.guilherme.leitor.linha;
 
+import br.com.guilherme.leitor.dados.Armazenador;
 import br.com.guilherme.leitor.modelo.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ public class LeitorRegistroTest {
     @BeforeEach
     void setUp() {
         leitorRegistro = new LeitorRegistro();
+        Armazenador.iniciaArmazenamento();
     }
 
     @Test

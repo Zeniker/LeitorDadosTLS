@@ -1,6 +1,6 @@
 package br.com.guilherme.leitor.linha;
 
-import br.com.guilherme.leitor.Armazenador;
+import br.com.guilherme.leitor.dados.Armazenador;
 import br.com.guilherme.leitor.modelo.Venda;
 import org.junit.jupiter.api.Test;
 

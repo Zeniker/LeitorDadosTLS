@@ -1,5 +1,7 @@
 package br.com.guilherme.leitor;
 
+import br.com.guilherme.leitor.dados.Armazenador;
+import br.com.guilherme.leitor.linha.LeitorRegistro;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

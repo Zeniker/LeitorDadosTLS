@@ -1,4 +1,4 @@
-package br.com.guilherme.leitor;
+package br.com.guilherme.leitor.linha;
 
 import br.com.guilherme.leitor.linha.TipoRegistro;
 import br.com.guilherme.leitor.modelo.ModeloLinha;

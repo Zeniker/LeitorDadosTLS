@@ -1,11 +1,10 @@
-package br.com.guilherme.leitor;
+package br.com.guilherme.leitor.dados;
 
 import br.com.guilherme.leitor.modelo.Cliente;
 import br.com.guilherme.leitor.modelo.Venda;
 import br.com.guilherme.leitor.modelo.Vendedor;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
