@@ -5,7 +5,7 @@ package br.com.guilherme.leitor.linha;
  */
 public abstract class LeitorLinha {
 
-    protected String[] separaLinhaEmColunas(String linha){
+    String[] separaLinhaEmColunas(String linha){
         return linha.split(";");
     }
 

@@ -8,8 +8,6 @@ import br.com.guilherme.leitor.modelo.Vendedor;
  */
 public class LinhaVendedor extends LeitorLinha {
 
-    private Vendedor vendedor;
-
     /**
      * Lê uma string passada por parâmetro e extrai seus dados
      *

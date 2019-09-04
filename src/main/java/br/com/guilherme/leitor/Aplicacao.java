@@ -4,13 +4,12 @@ import br.com.guilherme.leitor.arquivo.ArquivoSumario;
 import br.com.guilherme.leitor.arquivo.BuscadorDeArquivos;
 import br.com.guilherme.leitor.arquivo.LeitorArquivo;
 
-import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
 public class Aplicacao {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) {
         try{
             List<Path> arquivos = BuscadorDeArquivos.buscaArquivosDat();
 

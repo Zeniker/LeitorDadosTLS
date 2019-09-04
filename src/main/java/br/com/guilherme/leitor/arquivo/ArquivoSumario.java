@@ -11,7 +11,7 @@ public class ArquivoSumario {
 
     private static final String NOME_ARQUIVO_OUT = "./dados/out/%s.dat.proc";
 
-    private Path caminhoArquivo;
+    private final Path caminhoArquivo;
 
     public ArquivoSumario(Path caminhoArquivo) {
         this.caminhoArquivo = caminhoArquivo;

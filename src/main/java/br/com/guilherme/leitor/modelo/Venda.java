@@ -6,11 +6,11 @@ import java.math.BigDecimal;
  * Classe de modelo da venda
  */
 public class Venda {
-    private String idVenda;
-    private String idItem;
-    private BigDecimal quantidadeItem;
-    private BigDecimal valorItem;
-    private String nomeVendedor;
+    private final String idVenda;
+    private final String idItem;
+    private final BigDecimal quantidadeItem;
+    private final BigDecimal valorItem;
+    private final String nomeVendedor;
 
     public Venda(String idVenda, String idItem, String quantidadeItem, String valorItem, String nomeVendedor) {
         this.idVenda = idVenda;

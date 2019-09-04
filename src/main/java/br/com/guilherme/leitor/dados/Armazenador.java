@@ -63,7 +63,7 @@ public class Armazenador {
      */
     public static int getTotalClientes(){
         return clientes.size();
-    };
+    }
 
     /**
      * Retorna o total de vendedores armazenados

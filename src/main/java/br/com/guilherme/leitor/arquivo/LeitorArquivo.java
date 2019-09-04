@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class LeitorArquivo {
 
-    private Path caminhoArquivo;
+    private final Path caminhoArquivo;
 
     public LeitorArquivo(Path caminhoArquivo) {
         this.caminhoArquivo = caminhoArquivo;
