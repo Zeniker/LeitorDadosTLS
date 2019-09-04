@@ -1,8 +1,5 @@
 package br.com.guilherme.leitor.linha;
 
-import br.com.guilherme.leitor.linha.TipoRegistro;
-import br.com.guilherme.leitor.modelo.ModeloLinha;
-
 public class LeitorRegistro {
 
     public void leRegistro(String linha){

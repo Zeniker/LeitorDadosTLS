@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * Classe de modelo da venda
  */
-public class Venda implements ModeloLinha  {
+public class Venda {
     private String idVenda;
     private String idItem;
     private BigDecimal quantidadeItem;

@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * Classe de modelo do vendedor
  */
-public class Vendedor implements ModeloLinha  {
+public class Vendedor {
 
     private final String CPF;
     private final String nome;

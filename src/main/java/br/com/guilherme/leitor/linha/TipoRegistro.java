@@ -1,7 +1,5 @@
 package br.com.guilherme.leitor.linha;
 
-import br.com.guilherme.leitor.modelo.ModeloLinha;
-
 import java.util.Arrays;
 import java.util.Optional;
 

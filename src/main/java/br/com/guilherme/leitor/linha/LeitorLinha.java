@@ -1,9 +1,8 @@
 package br.com.guilherme.leitor.linha;
 
-import br.com.guilherme.leitor.modelo.ModeloLinha;
-
-import java.util.Arrays;
-
+/**
+ * Classe de abstração dos leitores
+ */
 public abstract class LeitorLinha {
 
     protected String[] separaLinhaEmColunas(String linha){
